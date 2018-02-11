@@ -1,16 +1,49 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
+<div style="height: 100vh;">
+
+  <mat-toolbar color="primary">
+
     <span>Gersh.in</span>
 
     <span class="example-spacer"></span>
-    
+
+    <div fxShow="true" fxHide.lt-md="true">
+
+
     <button mat-button>Home</button>
     <button mat-button>Photos</button>
     <button mat-button>About</button>
 	<button mat-button>Blog</button>
-	<button mat-icon-button>
-		<mat-icon>more_vert</mat-icon>
-	</button>
-  </mat-toolbar-row>
-</mat-toolbar>
+
+    </div>
+
+    <div fxShow="true" fxHide.gt-sm="true">
+
+      <a href="#" (click)="sidenav.toggle()">Show Side Menu</a>
+
+    </div>
+
+  </mat-toolbar>
+
+  <mat-sidenav-container fxFlexFill class="example-container">
+
+    <mat-sidenav #sidenav fxLayout="column">
+
+      <div fxLayout="column">
+
+        <a (click)="sidenav.toggle()" href="#" mat-button>Close</a>
+
+    <button mat-button>Home</button>
+    <button mat-button>Photos</button>
+    <button mat-button>About</button>
+	<button mat-button>Blog</button>
+
+      </div>
+
+    </mat-sidenav>
+
+    <mat-sidenav-content fxFlexFill>Main content</mat-sidenav-content>
+
+  </mat-sidenav-container>
+
+</div>
 
