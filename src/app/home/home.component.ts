@@ -8,19 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   selector: '',
   styles: [`
   `],
-  template: `
-    <h1>Home</h1>
-    <div>
-      For hot module reloading run
-      <pre>npm run start:hmr</pre>
-    </div>
-    <div>
-      <h3>
-        patrick@tipe.io
-      </h3>
-    </div>
-    <pre>this.localState = {{ localState | json }}</pre>
-  `
+  templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit {
 
