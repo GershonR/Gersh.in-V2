@@ -25,4 +25,8 @@ export class NavbarComponent implements OnInit {
 	closeSidenav() {
 		this.sidenavService.close();
 	}
+	
+	openSidenav() {
+		this.sidenavService.open();
+	}
 }
