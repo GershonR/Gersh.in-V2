@@ -10,6 +10,8 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
+import { SidenavService } from './navbar/sidenavservice.service';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +27,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 	MaterialModule,
 	FlexLayoutModule
   ],
-  providers: [],
+  providers: [SidenavService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
