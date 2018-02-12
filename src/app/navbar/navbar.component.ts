@@ -16,11 +16,13 @@ export class NavbarComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.sidenavService.setSidenav(this.sidenav);
-		console.log(this.sidenav);
 	}
 		
 	toggleSidenav() {
 		this.sidenavService.toggle();
-		console.log(this.sidenav);
+	}
+	
+	closeSidenav() {
+		this.sidenavService.close();
 	}
 }

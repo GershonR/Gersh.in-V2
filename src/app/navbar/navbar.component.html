@@ -54,7 +54,7 @@
 
     </mat-sidenav>
   <div class="content">
-    <router-outlet></router-outlet>
+    <router-outlet (activate)="closeSidenav()"></router-outlet>
   </div>
 </mat-sidenav-container>
 </div>
