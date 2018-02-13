@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { CopyRightComponent } from './copyright/copyright.component';
+import { ProjectsComponent } from './projects/projects.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
 import { SidenavService } from './navbar/sidenavservice.service';
@@ -29,7 +30,8 @@ export class AppHammerConfig extends HammerGestureConfig  {
 	NavbarComponent,
 	AboutComponent,
 	HomeComponent,
-	CopyRightComponent
+	CopyRightComponent,
+	ProjectsComponent
   ],
   imports: [
     BrowserModule,
