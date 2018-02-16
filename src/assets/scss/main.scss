@@ -18,3 +18,8 @@ a.white {
 a.white:hover { 
    color: white;
 }
+
+*:focus {
+    outline: none !important;
+    border: 0 !important;
+}

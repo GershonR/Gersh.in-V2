@@ -1,64 +1,71 @@
 <div (swiperight)="openSidenav()" (swipeleft)="closeSidenav()">
-<mat-toolbar color="primary">
 
-
-    <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="5px" xShow="true" fxHide.lt-md="true">
-		<div fxFlex="5">
-
-		</div>
-		<div fxFlex="2">
-			<img src="assets/img/logo/logo.png">
-		</div>
-		<div fxFlex="10">
-			<button mat-button [routerLink] ="['']"><mat-icon>home</mat-icon><span> Home</span></button>
-			<button mat-button [routerLink] ="['/projects']"><mat-icon>folder</mat-icon><span> Projects</span></button>
-			<button mat-button><mat-icon>photo</mat-icon><span> Photos</span></button>
-			<button mat-button><mat-icon>chat</mat-icon><span> Blog</span></button>
-			<button mat-button><mat-icon>https</mat-icon><span> Links</span></button>
-			<button mat-button [routerLink] ="['/about']"><mat-icon>person</mat-icon><span> About</span></button>
-		</div>
-
-    </div>
-
-    <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="10px" fxFlex="50px" fxShow="true" fxHide.gt-sm="true" style="vertical-align: bottom">
-	
-		<a (click)="toggleSidenav()"><mat-icon class="white-icon">menu</mat-icon></a>
-			
-
-    </div>
-	
-	<div fxFlex="205px" fxFlex.lg="65" fxLayout="row" fxLayoutAlign="center start" fxShow="true" fxHide.gt-sm="true">
+	<mat-sidenav-container class="main-container" fullscreen>
 		
-		<a [routerLink] ="['']" class="white">Gersh.in</a>
+		<!-- Toolbar -->
+		<mat-toolbar color="primary">
+		
+		
+			<div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="5px" xShow="true" fxHide.lt-md="true">
+				<div fxFlex="5">
+		
+				</div>
+				<div fxFlex="2">
+					<img src="assets/img/logo/logo.png">
+				</div>
+				<div fxFlex="10">
+					<button mat-button [routerLink] ="['']"><mat-icon>home</mat-icon><span> Home</span></button>
+					<button mat-button [routerLink] ="['/projects']"><mat-icon>folder</mat-icon><span> Projects</span></button>
+					<button mat-button [routerLink] ="['/photos']"><mat-icon>photo</mat-icon><span> Photos</span></button>
+					<button mat-button><mat-icon>chat</mat-icon><span> Blog</span></button>
+					<button mat-button><mat-icon>https</mat-icon><span> Links</span></button>
+					<button mat-button [routerLink] ="['/about']"><mat-icon>person</mat-icon><span> About</span></button>
+				</div>
+		
+			</div>
+		
+			<div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="10px" fxFlex="50px" fxShow="true" fxHide.gt-sm="true" style="vertical-align: bottom">
 			
-	</div>
+				<button mat-icon-button (click)="toggleSidenav()"><mat-icon>menu</mat-icon></button>
+					
+		
+			</div>
+			
+			<div fxFlex="205px" fxFlex.lg="65" fxLayout="row" fxLayoutAlign="center start" fxShow="true" fxHide.gt-sm="true">
+				
+				<a [routerLink] ="['']" class="white">Gersh.in</a>
+					
+			</div>
+			
+		</mat-toolbar>
+		
+		<!-- Side Navigation For Mobile -->
+		<mat-sidenav #sidenav fxLayout="column">
 	
+			<div fxLayout="column" fxLayoutAlign="start start">
+		
+					<button mat-button [routerLink] ="['']"><mat-icon>home</mat-icon><span> Home</span></button>
+					<button mat-button [routerLink] ="['/projects']"><mat-icon>folder</mat-icon><span> Projects</span></button>
+					<button mat-button [routerLink] ="['/photos']"><mat-icon>photo</mat-icon><span> Photos</span></button>
+					<button mat-button><mat-icon>chat</mat-icon><span> Blog</span></button>
+					<button mat-button><mat-icon>https</mat-icon><span> Links</span></button>
+					<button mat-button [routerLink] ="['/about']"><mat-icon>person</mat-icon><span> About</span></button>
+		
+			</div>
 	
-
-</mat-toolbar>
-
-<mat-sidenav-container fxFlexFill class="example-container">
-
-    <mat-sidenav #sidenav fxLayout="column">
-
-      <div fxLayout="column" fxLayoutAlign="start start">
-
-			<button mat-button [routerLink] ="['']"><mat-icon>home</mat-icon><span> Home</span></button>
-			<button mat-button [routerLink] ="['/projects']"><mat-icon>folder</mat-icon><span> Projects</span></button>
-			<button mat-button><mat-icon>photo</mat-icon><span> Photos</span></button>
-			<button mat-button><mat-icon>chat</mat-icon><span> Blog</span></button>
-			<button mat-button><mat-icon>https</mat-icon><span> Links</span></button>
-			<button mat-button [routerLink] ="['/about']"><mat-icon>person</mat-icon><span> About</span></button>
-
-      </div>
-
-    </mat-sidenav>
-</mat-sidenav-container>
+		</mat-sidenav>
+	
+		<!-- Actual Page Content -->
+		<div class="content">
+			
+			<router-outlet (activate)="closeSidenav()"></router-outlet>
+			
+			<div class="container" style="text-align: center"><br> <!-- TO DO - Replace With FooterComponent -->
+				<hr>
+				<small>Copyright © Gershon 2018. All rights reserved.</small>
+			</div>
+		
+		</div>
+	
+	</mat-sidenav-container>
 </div>
-  <div class="content">
-    <router-outlet (activate)="closeSidenav()"></router-outlet>
-	<div class="container" style="text-align: center"><br> <!-- TO DO - Replace With FooterComponent -->
-		<hr>
-		 <small>Copyright © Gershon 2018. All rights reserved.</small>
-	</div>
-  </div>

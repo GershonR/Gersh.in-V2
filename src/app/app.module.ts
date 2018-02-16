@@ -1,9 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material.module';
 import { FlexLayoutModule } from "@angular/flex-layout";
+
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
@@ -11,8 +14,8 @@ import { HomeComponent } from './home/home.component';
 import { CopyRightComponent } from './copyright/copyright.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { PhotosComponent } from './photos/photos.component';
 
-import { SidenavService } from './navbar/sidenavservice.service';
 
 import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 
@@ -31,16 +34,19 @@ export class AppHammerConfig extends HammerGestureConfig  {
 	AboutComponent,
 	HomeComponent,
 	CopyRightComponent,
-	ProjectsComponent
+	ProjectsComponent,
+	PhotosComponent
   ],
   imports: [
     BrowserModule,
+	HttpClientModule, 
+	HttpModule,
 	AppRoutingModule,
 	BrowserAnimationsModule,
 	MaterialModule,
 	FlexLayoutModule
   ],
-  providers: [SidenavService,
+  providers: [HttpClientModule,
   { 
     provide: HAMMER_GESTURE_CONFIG, 
     useClass: AppHammerConfig 

@@ -1,5 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core'; 
-import { SidenavService } from './sidenavservice.service';
+import { Component, ViewChild } from '@angular/core'; 
 import { MatSidenav } from '@angular/material';
 
 @Component({ 
@@ -7,26 +6,15 @@ import { MatSidenav } from '@angular/material';
     templateUrl: 'navbar.component.html'
 }) 
 
-export class NavbarComponent implements OnInit { 
+export class NavbarComponent { 
 	name = 'Angular';
-	
 	@ViewChild('sidenav') public sidenav: MatSidenav;
-  
-	constructor(private sidenavService: SidenavService) {}
-
-	ngOnInit(): void {
-		this.sidenavService.setSidenav(this.sidenav);
-	}
 		
 	toggleSidenav() {
-		this.sidenavService.toggle();
+		this.sidenav.toggle();
 	}
 	
 	closeSidenav() {
-		this.sidenavService.close();
-	}
-	
-	openSidenav() {
-		this.sidenavService.open();
+		this.sidenav.close();
 	}
 }
