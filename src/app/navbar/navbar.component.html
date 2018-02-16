@@ -1,9 +1,10 @@
-<div (swiperight)="openSidenav()" (swipeleft)="closeSidenav()">
+<div (swiperight)="toggleSidenav()" (swipeleft)="closeSidenav()">
 
-	<mat-sidenav-container class="main-container" fullscreen>
+	<mat-sidenav-container class="sidenav-container" fullscreen>
+
 		
 		<!-- Toolbar -->
-		<mat-toolbar color="primary">
+		<mat-toolbar color="primary" class="mat-elevation-z8">
 		
 		
 			<div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="5px" xShow="true" fxHide.lt-md="true">
@@ -59,13 +60,12 @@
 		<div class="content">
 			
 			<router-outlet (activate)="closeSidenav()"></router-outlet>
-			
-			<div class="container" style="text-align: center"><br> <!-- TO DO - Replace With FooterComponent -->
-				<hr>
-				<small>Copyright © Gershon 2018. All rights reserved.</small>
-			</div>
 		
 		</div>
+		
+			<div class="footer mat-toolbar mat-primary" mat-subheader style="text-align: center; line-height:3"> <!-- TO DO - Replace With FooterComponent -->
+				<small>Copyright © Gershon 2018. All rights reserved.</small>
+			</div>
 	
 	</mat-sidenav-container>
 </div>
