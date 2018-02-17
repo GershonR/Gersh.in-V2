@@ -4,7 +4,7 @@
 
 		
 		<!-- Toolbar -->
-		<mat-toolbar color="primary" class="mat-elevation-z8">
+		<mat-toolbar color="primary" class="mat-elevation-z8 fixed-header">
 		
 		
 			<div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="5px" xShow="true" fxHide.lt-md="true">
@@ -41,7 +41,7 @@
 		</mat-toolbar>
 		
 		<!-- Side Navigation For Mobile -->
-		<mat-sidenav #sidenav fxLayout="column">
+		<mat-sidenav #sidenav fxLayout="column" style="min-width:120px;">
 	
 			<div fxLayout="column" fxLayoutAlign="start start">
 		
@@ -57,15 +57,16 @@
 		</mat-sidenav>
 	
 		<!-- Actual Page Content -->
-		<div class="content">
+		<div class="site"fxLayout="column">
+			<div class="content Site-content" style="margin-top: 60px !important;" fxFlex="1">
 			
-			<router-outlet (activate)="closeSidenav()"></router-outlet>
+				<router-outlet (activate)="closeSidenav()"></router-outlet>
 		
-		</div>
+			</div>
 		
-			<div class="footer mat-toolbar mat-primary" mat-subheader style="text-align: center; line-height:3"> <!-- TO DO - Replace With FooterComponent -->
+			<div class="mat-toolbar mat-primary" mat-subheader style="text-align: center; line-height:3"> <!-- TO DO - Replace With FooterComponent -->
 				<small>Copyright © Gershon 2018. All rights reserved.</small>
 			</div>
-	
+		</div>
 	</mat-sidenav-container>
 </div>

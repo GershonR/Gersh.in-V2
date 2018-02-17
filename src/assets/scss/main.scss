@@ -2,6 +2,15 @@
 // @import "variables";
 // @import "global";
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.site {
+  min-height: 100%;
+}
+
 .white-icon {
     color: white;
 	padding-top: 6px;
@@ -33,4 +42,12 @@ a.white:hover {
 	bottom: 0;
 	width: 100%;
 	position: fixed;
+}
+
+.fixed-header {
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index:999;
+  width: 100%  !important;
 }
