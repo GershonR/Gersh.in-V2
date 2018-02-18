@@ -22,7 +22,8 @@
       "styles": [
 		"../node_modules/bootstrap/scss/bootstrap.scss",
         "styles.scss",
-		"assets/scss/main.scss"
+		"assets/scss/main.scss",
+		"../node_modules/angular2-lightbox/lightbox.css"
       ],
 	  "scripts": [
 	  	"../node_modules/jquery/dist/jquery.min.js",

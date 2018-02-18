@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import { LightboxModule } from 'angular2-lightbox';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 import { AppComponent } from './app.component';
@@ -53,6 +55,8 @@ export class AppHammerConfig extends HammerGestureConfig  {
 	BrowserAnimationsModule,
 	MaterialModule,
 	FlexLayoutModule,
+	LightboxModule,
+	NgxPaginationModule,
 	ScrollToModule.forRoot()
   ],
   providers: [HttpClientModule,

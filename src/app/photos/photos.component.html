@@ -1,7 +1,17 @@
 <div class="container"><br>
     <h1>Photos</h1>
 	<hr>
-	<div *ngFor="let photo of photos;">
-		test
+	
+	<div class="column has-text-centered">
+		<div class="img-row" *ngFor="let image of albums | paginate: { itemsPerPage: 9, currentPage: page }; let i=index">
+			<div class="img-frame">
+				<img [src]="image.thumb" (click)="open(i)" width="320px" height="auto"/>
+			</div>
+		</div>
 	</div>
+	<br>
+	<div class="text-center">
+		<pagination-controls (pageChange)="page = $event"></pagination-controls>
+	</div>
+	
 </div>
