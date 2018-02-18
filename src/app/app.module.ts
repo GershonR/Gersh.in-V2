@@ -19,10 +19,18 @@ import { PhotosComponent } from './photos/photos.component';
 
 import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 
+import * as Hammer from 'hammerjs';
+
 
 export class AppHammerConfig extends HammerGestureConfig  {
   overrides = <any>{
     'swipe': {velocity: 0.4, threshold: 20} // override default settings
+  }
+  buildHammer(element: HTMLElement) {
+	  delete Hammer.defaults.cssProps.userSelect;
+      return new Hammer(element, {
+          inputClass: Hammer.TouchInput
+      });
   }
 }
 
