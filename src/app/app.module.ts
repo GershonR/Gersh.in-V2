@@ -5,7 +5,8 @@ import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material.module';
-import { FlexLayoutModule } from "@angular/flex-layout";
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 
 import { AppComponent } from './app.component';
@@ -15,7 +16,6 @@ import { CopyRightComponent } from './copyright/copyright.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PhotosComponent } from './photos/photos.component';
-
 
 import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 
@@ -52,7 +52,8 @@ export class AppHammerConfig extends HammerGestureConfig  {
 	AppRoutingModule,
 	BrowserAnimationsModule,
 	MaterialModule,
-	FlexLayoutModule
+	FlexLayoutModule,
+	ScrollToModule.forRoot()
   ],
   providers: [HttpClientModule,
   { 

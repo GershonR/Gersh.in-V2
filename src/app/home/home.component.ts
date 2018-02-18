@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit  } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 
@@ -7,7 +7,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./home.css'],
   templateUrl: './home.component.html'
 })
-export class HomeComponent {
-
+export class HomeComponent  {
+	
 
 }
