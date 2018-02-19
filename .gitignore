@@ -44,3 +44,4 @@ Thumbs.db
 
 # Photos
 /src/assets/img/photos/*.jpg
+/src/assets/img/photos

@@ -7,14 +7,17 @@
 			</div>	
 </div> -->
 <div class="video-background d-none d-lg-block">
-      <iframe src="https://www.youtube.com/embed/rj81emE48wI?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1" frameborder="0" allowfullscreen></iframe>
+      <iframe *ngIf="muted" src="https://www.youtube.com/embed/rj81emE48wI?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1" frameborder="0" allowfullscreen></iframe>
+	  <iframe *ngIf="!muted" src="https://www.youtube.com/embed/rj81emE48wI?controls=0&showinfo=0&rel=0&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>
   </div>
 <div class="cover d-none d-lg-block">
 	<header class="text">
 		<h1>GERSH.IN</h1>
-		<span class="major"></span>
+		<span class="major"></span><br>
 	</header>
 	<a [ngx-scroll-to-offset]="-100" [ngx-scroll-to]="'intro'" href="#"><mat-icon class="bounce arrow">keyboard_arrow_down</mat-icon></a>
+	<button *ngIf="muted" mat-fab class="mute" (click)="toggleMute()">Unmute</button>
+	<button *ngIf="!muted" mat-fab class="mute" (click)="toggleMute()">Mute</button>
 </div>
 <div class="jumbotron text-center">
 	<section id="intro">

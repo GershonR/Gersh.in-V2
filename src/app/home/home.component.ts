@@ -9,5 +9,11 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HomeComponent  {
 	
+	public muted = true;
+	
+	toggleMute() {
+		console.log(this.muted);
+		this.muted = !this.muted;
+	}
 
 }

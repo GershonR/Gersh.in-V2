@@ -14,7 +14,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none;
   opacity:0.75;
 }
 @media (min-aspect-ratio: 16/9) {
@@ -29,7 +28,6 @@
   top: 0;
   left: 0;
   z-index: 10;
-
   width: 100%;
   height: 100%;
 }
@@ -51,6 +49,14 @@
     0.5px 0.5px 0 #000;
 }
 
+.mute {
+  position: absolute;
+  top: 90%;
+  left: 95%;
+  z-index: 15;
+  pointer-events: all; 
+}
+
 .major {
     background: #dddddd;
     content: '';
@@ -70,6 +76,8 @@
   text-align: center;
   font-size: 80px; 
   color: white;
+  right: 0; 
+  bottom: 0;
 }
 
 .bounce {

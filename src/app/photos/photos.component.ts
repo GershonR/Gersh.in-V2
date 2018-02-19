@@ -56,7 +56,7 @@ export class PhotosComponent {
   public albums: Array<IAlbum>;
   private _options: Object;
   private _subscription: Subscription;
-  private page: number = 1;
+  public page: number = 1;
   constructor(private _lighboxConfig: LightboxConfig, private _lightbox: Lightbox, private _lightboxEvent: LightboxEvent,) {
 	this.albums = [];
     this._options = {};
