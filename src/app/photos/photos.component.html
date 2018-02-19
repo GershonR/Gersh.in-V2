@@ -1,17 +1,17 @@
 <div class="container"><br>
     <h1>Photos</h1>
 	<hr>
-	
-	<div class="column has-text-centered">
-		<div class="img-row" *ngFor="let image of albums | paginate: { itemsPerPage: 9, currentPage: page }; let i=index">
-			<div class="img-frame">
-				<img [src]="image.thumb" (click)="open(i)" width="320px" height="auto"/>
+	<div class="paragraphs">
+		<div class="row">
+			<div class="img-frame col-md-4" *ngFor="let image of albums | paginate: { itemsPerPage: 9, currentPage: page }; let i=index">
+					<div class="clearfix" *ngIf="needsNewRow(i)"></div>
+					<img class="img-responsive img-thumbnail" [src]="image.thumb" (click)="open(i)"/>
 			</div>
 		</div>
-	</div>
-	<br>
-	<div class="text-center">
-		<pagination-controls (pageChange)="page = $event"></pagination-controls>
+		<br>
+		<div class="text-center">
+			<pagination-controls (pageChange)="page = $event"></pagination-controls>
+		</div>
 	</div>
 	
 </div>

@@ -88,6 +88,12 @@ export class PhotosComponent {
       this._subscription.unsubscribe();
     }
   }
+  
+  needsNewRow(index) {
+	  if(index % 3 == 0)
+		  return true;
+	  return false;
+  }
 
 
 
