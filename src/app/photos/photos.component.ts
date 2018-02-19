@@ -60,6 +60,8 @@ export class PhotosComponent {
 		{'caption': 'TOKYO 2017 JAPAN TRIP.', 'thumb': 'assets/img/thumbnails/31.jpg', 'src': 'assets/img/photos/31.jpg' },
 		{'caption': 'TOKYO 2017 JAPAN TRIP.', 'thumb': 'assets/img/thumbnails/32.jpg', 'src': 'assets/img/photos/32.jpg' },
 		{'caption': 'TOKYO 2017 JAPAN TRIP.', 'thumb': 'assets/img/thumbnails/33.jpg', 'src': 'assets/img/photos/33.jpg' },
+		{'caption': 'NANJING - 2017 VOLUNTEERING IN CHINA TRIP.', 'thumb': 'assets/img/thumbnails/2017-07-18-nanjing1.jpg', 'src': 'assets/img/photos/2017-07-18-nanjing1.jpg' },
+		{'caption': 'SUZHOU - 2017 VOLUNTEERING IN CHINA TRIP.', 'thumb': 'assets/img/thumbnails/2017-06-18-suzhou1.jpg', 'src': 'assets/img/photos/2017-06-18-suzhou1.jpg' },
 		{'caption': '2017 VOLUNTEERING IN CHINA TRIP.', 'thumb': 'assets/img/thumbnails/10.jpg', 'src': 'assets/img/photos/10.jpg' },
 		{'caption': '2017 VOLUNTEERING IN CHINA TRIP.', 'thumb': 'assets/img/thumbnails/11.jpg', 'src': 'assets/img/photos/11.jpg' },
 		{'caption': '2017 VOLUNTEERING IN CHINA TRIP.', 'thumb': 'assets/img/thumbnails/12.jpg', 'src': 'assets/img/photos/12.jpg' },
