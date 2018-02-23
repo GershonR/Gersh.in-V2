@@ -19,16 +19,18 @@ export class ExtrasComponent {
  
   constructor(private _cookieService:CookieService){}
  
-  getCookie(key: string){
-    return this._cookieService.get(key);
+  clearCookies(){
+	this._cookieService.removeAll();
+	window.location.reload();
   }
+  
 
-  public onChangeColor() {
+  onChangeColor() {
 	jQuery(".mat-toolbar.mat-primary").css("background", this.color);
 	this._cookieService.put("color", this.color);
   }
   
-  public restoreDefault() {
+  restoreDefault() {
 	jQuery(".mat-toolbar.mat-primary").css("background", this.defaultColor);
 	this._cookieService.put("color", this.defaultColor);
   }

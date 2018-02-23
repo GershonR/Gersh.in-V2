@@ -2,8 +2,12 @@
     <h1>Extras</h1>
 	<hr>
 	<mat-card>
+		<mat-card-header fxLayout="row">
+			<mat-card-title><h4>Website Settings</h4></mat-card-title>
+				<div fxFlex></div>
+				<button mat-button (confirm)="clearCookies()" color="warn" [swal]="{title: 'Clear Cookies?', text: 'Website settings will be set to default values.', type: 'warning', showCancelButton: true}"><span> Clear Cookies</span></button>
+			</mat-card-header>
 		<mat-card-content>
-			<h4>Website Settings</h4>
 			<section>
 			<mat-slide-toggle [checked]="isCheckedHeader()" (change)="headerToggle($event)">Fixed Navigation</mat-slide-toggle><br>
 			</section>
