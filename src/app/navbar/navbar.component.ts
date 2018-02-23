@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core'; 
+import { Component, ViewChild, AfterViewInit } from '@angular/core'; 
 import { MatSidenav } from '@angular/material';
 import { CookieService } from 'angular2-cookie/core';
 
@@ -8,7 +8,7 @@ declare var jQuery:any;
     templateUrl: 'navbar.component.html'
 }) 
 
-export class NavbarComponent implements ngAfterViewInit { 
+export class NavbarComponent implements AfterViewInit { 
 	name = 'Angular';
 	@ViewChild('sidenav') public sidenav: MatSidenav;
 	
