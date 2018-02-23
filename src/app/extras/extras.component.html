@@ -1,9 +1,28 @@
 <div class="container"><br>
     <h1>Extras</h1>
 	<hr>
-	<h4>Website Color</h4>
-	<input [(colorPicker)]="color" [cpPosition]="'bottom'" [style.background]="color" (cpInputChange)="onEventLog('cpInputChange', $event)" (cpSliderDragEnd)="onChangeColor()" readonly="true"/><br>
-	<button mat-raised-button color="primary" (click)="restoreDefault()"><span> Restore Default</span></button>
+	<mat-card>
+		<mat-card-content>
+			<h4>Website Settings</h4>
+			<section>
+			<mat-slide-toggle [checked]="isCheckedHeader()" (change)="headerToggle($event)">Sticky Navigation</mat-slide-toggle><br>
+			</section>
+			
+			<section>
+			<mat-slide-toggle [checked]="isCheckedFooter()" (change)="footerToggle($event)">Sticky Footer</mat-slide-toggle><br>
+			</section>
+		</mat-card-content>
+	</mat-card>
+	<mat-card>
+		<mat-card-content>
+			<h4>Website Color</h4>
+		
+			<section>
+				<input [(colorPicker)]="color" [cpPosition]="'bottom'" [style.background]="color" (cpInputChange)="onEventLog('cpInputChange', $event)" (cpSliderDragEnd)="onChangeColor()" readonly="true"/><br>
+				<button mat-raised-button color="primary" (click)="restoreDefault()"><span> Restore Default</span></button>
+			</section>
+		</mat-card-content>
+	</mat-card>
 	<br>
 	<br>
 </div>

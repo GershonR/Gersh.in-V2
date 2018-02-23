@@ -3,8 +3,8 @@
 	<mat-sidenav-container class="sidenav-container" fullscreen>
 
 		
-		<!-- Toolbar -->
-		<mat-toolbar color="primary" class="mat-elevation-z8 fixed-header">
+		<!-- Toolbar [ngClass]="{'fixed-header': !isFixedHeader()}" -->
+		<mat-toolbar color="primary" [ngClass]="{'fixed-header': !isFixedHeader()}" class="mat-elevation-z8 regular-header">
 		
 		
 			<div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="5px" xShow="true" fxHide.lt-md="true">
@@ -63,10 +63,11 @@
 				<router-outlet (activate)="closeSidenav()"></router-outlet>
 		
 			</div>
-		
-			<div class="mat-toolbar mat-primary" mat-subheader style="text-align: center; line-height:3"> <!-- TO DO - Replace With FooterComponent -->
-				<small>Copyright © Gershon 2018. All rights reserved.</small>
-			</div>
+			<footer [ngClass]="{'footer': !isFixedFooter()}">
+				<div class="mat-toolbar mat-primary" mat-subheader style="text-align: center; line-height:3"> <!-- TO DO - Replace With FooterComponent -->
+					<small>Copyright © Gershon 2018. All rights reserved. {{fixedFooter}}</small>
+				</div>
+			</footer>
 		</div>
 	</mat-sidenav-container>
 </div>

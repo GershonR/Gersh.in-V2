@@ -8,10 +8,9 @@ declare var jQuery:any;
     templateUrl: 'navbar.component.html'
 }) 
 
-export class NavbarComponent implements AfterViewInit { 
+export class NavbarComponent implements AfterViewInit {
 	name = 'Angular';
 	@ViewChild('sidenav') public sidenav: MatSidenav;
-	
 	constructor(private _cookieService:CookieService){}
 	
 	ngAfterViewInit(): void {
@@ -19,6 +18,7 @@ export class NavbarComponent implements AfterViewInit {
 		if(color != undefined && color != null) {
 			jQuery(".mat-toolbar.mat-primary").css("background", color);
 		}
+		
 	}
 		
 	toggleSidenav() {
@@ -27,5 +27,13 @@ export class NavbarComponent implements AfterViewInit {
 	
 	closeSidenav() {
 		this.sidenav.close();
+	}
+	
+	isFixedFooter() {
+		return this._cookieService.get("footer") == 'true';
+	}
+	
+	isFixedHeader() {
+		return this._cookieService.get("header") == 'true';
 	}
 }
