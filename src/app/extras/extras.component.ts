@@ -43,11 +43,11 @@ export class ExtrasComponent {
   }
 
   headerToggle(event) {
-	this._cookieService.put("header", ""+!this.checkedHeader);
+	this._cookieService.put("header", ""+this.checkedHeader);
   }
   
   isCheckedHeader() {
-	  this.checkedHeader = this._cookieService.get("header") == 'true'
+	  this.checkedHeader = this._cookieService.get("header") == 'false' || this._cookieService.get("header") == undefined;
 	  return this.checkedHeader;
   }
 

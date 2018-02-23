@@ -18,7 +18,7 @@
 			<h4>Website Color</h4>
 		
 			<section>
-				<input [(colorPicker)]="color" [cpPosition]="'bottom'" [style.background]="color" (cpInputChange)="onEventLog('cpInputChange', $event)" (cpSliderDragEnd)="onChangeColor()" readonly="true"/><br>
+				<input [(colorPicker)]="color" [cpPosition]="'bottom'" [style.background]="color" (cpSliderDragEnd)="onChangeColor()" readonly="true"/><br>
 				<button mat-raised-button color="primary" (click)="restoreDefault()"><span> Restore Default</span></button>
 			</section>
 		</mat-card-content>

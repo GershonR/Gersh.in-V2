@@ -63,9 +63,9 @@
 				<router-outlet (activate)="closeSidenav()"></router-outlet>
 		
 			</div>
-			<footer [ngClass]="{'footer': !isFixedFooter()}">
+			<footer [ngClass]="{'footer': isFixedFooter()}">
 				<div class="mat-toolbar mat-primary" mat-subheader style="text-align: center; line-height:3"> <!-- TO DO - Replace With FooterComponent -->
-					<small>Copyright © Gershon 2018. All rights reserved. {{fixedFooter}}</small>
+					<small>Copyright © Gershon 2018. All rights reserved.</small>
 				</div>
 			</footer>
 		</div>
