@@ -13,9 +13,9 @@ declare var jQuery:any;
 export class ExtrasComponent {
 	
  public defaultColor: string = '#3f51b5';
- public color: string = '#3f51b5'
- checkedFooter = true;
- checkedHeader = false;
+ public color: string = '#3f51b5';
+ checkedFooter: boolean = true;
+ checkedHeader: boolean = false;
  
   constructor(private _cookieService:CookieService){}
  
@@ -34,7 +34,7 @@ export class ExtrasComponent {
   }
   
   footerToggle(event) {
-	this._cookieService.put("footer", !this.checkedFooter);
+	this._cookieService.put("footer", ""+!this.checkedFooter);
   }
   
   isCheckedFooter() {
@@ -43,7 +43,7 @@ export class ExtrasComponent {
   }
 
   headerToggle(event) {
-	this._cookieService.put("header", !this.checkedHeader);
+	this._cookieService.put("header", ""+!this.checkedHeader);
   }
   
   isCheckedHeader() {
