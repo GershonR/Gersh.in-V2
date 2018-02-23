@@ -1,0 +1,7 @@
+<div class="container"><br>
+    <h1>Extras</h1>
+	<hr>
+	<h4>Website Color</h4>
+	<input [(colorPicker)]="color" [style.background]="color" (cpInputChange)="onEventLog('cpInputChange', $event)" (cpSliderDragEnd)="onChangeColor()"/><br>
+	<button mat-raised-button color="primary" (click)="restoreDefault()"><span> Restore Default</span></button>
+</div>

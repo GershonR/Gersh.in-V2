@@ -9,6 +9,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { LightboxModule } from 'angular2-lightbox';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { ColorPickerModule } from 'ngx-color-picker';
 
 
 import { AppComponent } from './app.component';
@@ -19,6 +20,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PhotosComponent } from './photos/photos.component';
 import { LinksComponent } from './links/links.component';
+import { ExtrasComponent } from './extras/extras.component';
 
 import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 
@@ -47,7 +49,8 @@ export class AppHammerConfig extends HammerGestureConfig  {
 	CopyRightComponent,
 	ProjectsComponent,
 	PhotosComponent,
-	LinksComponent
+	LinksComponent,
+	ExtrasComponent
   ],
   imports: [
     BrowserModule,
@@ -59,6 +62,7 @@ export class AppHammerConfig extends HammerGestureConfig  {
 	FlexLayoutModule,
 	LightboxModule,
 	NgxPaginationModule,
+	ColorPickerModule,
 	ScrollToModule.forRoot()
   ],
   providers: [HttpClientModule,

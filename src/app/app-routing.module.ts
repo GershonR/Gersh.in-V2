@@ -6,8 +6,13 @@ import { CopyRightComponent } from './copyright/copyright.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { PhotosComponent } from './photos/photos.component';
 import { LinksComponent } from './links/links.component';
+import { ExtrasComponent } from './extras/extras.component';
 
 const routes: Routes = [
+  {
+    path: 'extras',
+    component: ExtrasComponent
+  },
   {
     path: 'links',
     component: LinksComponent
