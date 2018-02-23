@@ -18,6 +18,7 @@ import { CopyRightComponent } from './copyright/copyright.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PhotosComponent } from './photos/photos.component';
+import { LinksComponent } from './links/links.component';
 
 import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 
@@ -45,7 +46,8 @@ export class AppHammerConfig extends HammerGestureConfig  {
 	HomeComponent,
 	CopyRightComponent,
 	ProjectsComponent,
-	PhotosComponent
+	PhotosComponent,
+	LinksComponent
   ],
   imports: [
     BrowserModule,
