@@ -24,7 +24,7 @@ import { ExtrasComponent } from './extras/extras.component';
 
 import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 
-import { CookieService } from 'angular2-cookie/services/cookies.service';
+import { CookieService, CookieOptions } from 'angular2-cookie/core';
 
 import * as Hammer from 'hammerjs';
 
@@ -67,7 +67,7 @@ export class AppHammerConfig extends HammerGestureConfig  {
 	ColorPickerModule,
 	ScrollToModule.forRoot()
   ],
-  providers: [HttpClientModule, CookieService,
+  providers: [HttpClientModule, CookieService, { provide: CookieOptions, useValue: {} },
   { 
     provide: HAMMER_GESTURE_CONFIG, 
     useClass: AppHammerConfig 
