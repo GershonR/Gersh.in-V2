@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CookieService } from 'angular2-cookie/core';
 
-import $ = require("jquery");
+declare var jQuery:any;
 @Component({
   selector: 'extras',
   styles: [`
@@ -13,16 +14,24 @@ export class ExtrasComponent {
  public defaultColor: string = '#3f51b5';
  public color: string = '#3f51b5'
  
+  constructor(private _cookieService:CookieService){}
+ 
+  getCookie(key: string){
+    return this._cookieService.get(key);
+  }
+ 
   public onEventLog(event: string, data: any) {
     console.log(event, data);
   }
 
   public onChangeColor() {
-	$(".mat-toolbar.mat-primary").css("background", this.color);
+	jQuery(".mat-toolbar.mat-primary").css("background", this.color);
+	this._cookieService.put("color", this.color);
   }
   
   public restoreDefault() {
-	$(".mat-toolbar.mat-primary").css("background", this.defaultColor);
+	jQuery(".mat-toolbar.mat-primary").css("background", this.defaultColor);
+	this._cookieService.put("color", this.defaultColor);
   }
 
 
