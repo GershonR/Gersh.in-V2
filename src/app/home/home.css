@@ -86,25 +86,23 @@
   animation: bounce 2s infinite;
 }
 
-.tile-header {
-  @include mat-normalize-text();
+.dev-header {
+  font-size: 14px;
+  color: white;
+  background: rgb(38, 166, 209);
+  padding: 15px 10px 15px 10px;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  max-width: 250px;
+}
 
-  display: flex;
-  align-items: center;
-  height: $mat-grid-list-one-line-height;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.38);
-  overflow: hidden;
-  padding: 0 $mat-grid-list-text-padding;
-
-  // Positioning
-  position: absolute;
-  left: 0;
-  right: 0;
-
-  &.mat-2-line {
-    height: $mat-grid-list-two-line-height;
-  }
+.skill-badge {
+	background-color: #e0e0e0;
+	color: rgba(0,0,0,.87);
+	margin-bottom: 10px;
+	padding: 8px 30px 10px 30px;
+	font-weight: normal;
 }
 
 .example-card {
