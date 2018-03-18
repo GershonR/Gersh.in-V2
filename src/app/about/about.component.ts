@@ -12,19 +12,19 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AboutComponent implements OnInit {
 
-  public localState: any;
-  constructor(
-    public route: ActivatedRoute
-  ) {}
+  public greeting = "Good night";
 
   public ngOnInit() {
-    this.route
-      .data
-      .subscribe((data: any) => {
-        this.localState = data.yourData;
-      });
-
-    console.log('hello `About` component');
+	var hour = (new Date()).getHours();
+	if (hour >= 6 && hour < 12) {
+		this.greeting = "Good morning";
+	} else if (hour >= 12 && hour < 18) {
+		this.greeting = "Good afternoon";
+	} else if (hour >= 18 && hour < 24) {
+		this.greeting = "Good evening";
+	} else {
+		this.greeting = "Good night";
+	}
   }
 
 
