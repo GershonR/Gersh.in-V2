@@ -20,7 +20,6 @@ export class HomeComponent implements AfterViewInit {
 		jQuery('h1').css({'opacity':( 100-jQuery(window).scrollTop() )/100});
 		
 		jQuery(window).scroll(function(){
-			alert("Called");
 			jQuery(".top").css("opacity", 1 - jQuery(window).scrollTop() / 250);
 		});
 	}
