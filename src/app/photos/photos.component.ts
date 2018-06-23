@@ -16,7 +16,25 @@ import 'rxjs/add/operator/map';
   }
 })
 export class PhotosComponent {
-  public albumsList = [ 
+  public albumsList = [
+  		{'caption': 'MORELIA 2018 MEXICO TRIP.', 'thumb': 'assets/img/thumbnails/2018-05-05-morelia4.jpg', 'src': 'assets/img/photos/2018-05-05-morelia4.jpg' },
+  		{'caption': 'MORELIA 2018 MEXICO TRIP.', 'thumb': 'assets/img/thumbnails/2018-05-05-morelia3.jpg', 'src': 'assets/img/photos/2018-05-05-morelia3.jpg' },
+  		{'caption': 'MORELIA 2018 MEXICO TRIP.', 'thumb': 'assets/img/thumbnails/2018-05-05-morelia2.jpg', 'src': 'assets/img/photos/2018-05-05-morelia2.jpg' },
+  		{'caption': 'MORELIA 2018 MEXICO TRIP.', 'thumb': 'assets/img/thumbnails/2018-05-04-morelia1.jpg', 'src': 'assets/img/photos/2018-05-04-morelia1.jpg' },
+  		{'caption': 'GUADALAJARA 2018 MEXICO TRIP.', 'thumb': 'assets/img/thumbnails/2018-04-30-guadalajara4.jpg', 'src': 'assets/img/photos/2018-04-30-guadalajara4.jpg' },
+  		{'caption': 'GUADALAJARA 2018 MEXICO TRIP.', 'thumb': 'assets/img/thumbnails/2018-04-30-guadalajara3.jpg', 'src': 'assets/img/photos/2018-04-30-guadalajara3.jpg' },
+  		{'caption': 'GUADALAJARA 2018 MEXICO TRIP.', 'thumb': 'assets/img/thumbnails/2018-04-30-guadalajara2.jpg', 'src': 'assets/img/photos/2018-04-30-guadalajara2.jpg' },
+  		{'caption': 'GUADALAJARA 2018 MEXICO TRIP.', 'thumb': 'assets/img/thumbnails/2018-04-29-guadalajara1.jpg', 'src': 'assets/img/photos/2018-04-29-guadalajara1.jpg' },
+  		{'caption': 'PUERTO VALLARTA 2018 MEXICO TRIP.', 'thumb': 'assets/img/thumbnails/2018-04-27-puerto-vallarta4.jpg', 'src': 'assets/img/photos/2018-04-27-puerto-vallarta4.jpg' },
+  		{'caption': 'PUERTO VALLARTA 2018 MEXICO TRIP.', 'thumb': 'assets/img/thumbnails/2018-04-27-puerto-vallarta3.jpg', 'src': 'assets/img/photos/2018-04-27-puerto-vallarta3.jpg' },
+  		{'caption': 'PUERTO VALLARTA 2018 MEXICO TRIP.', 'thumb': 'assets/img/thumbnails/2018-04-28-puerto-vallarta2.jpg', 'src': 'assets/img/photos/2018-04-28-puerto-vallarta2.jpg' },
+  		{'caption': 'PUERTO VALLARTA 2018 MEXICO TRIP.', 'thumb': 'assets/img/thumbnails/2018-04-27-puerto-vallarta1.jpg', 'src': 'assets/img/photos2018-04-27-puerto-vallarta1.jpg' },
+  		{'caption': 'GUANAJUATO 2018 MEXICO TRIP.', 'thumb': 'assets/img/thumbnails/2018-04-23-guanajuato5.jpg', 'src': 'assets/img/photos/2018-04-23-guanajuato5.jpg' },
+  		{'caption': 'GUANAJUATO 2018 MEXICO TRIP.', 'thumb': 'assets/img/thumbnails/2018-04-23-guanajuato4.jpg', 'src': 'assets/img/photos/2018-04-23-guanajuato4.jpg' },
+  		{'caption': 'GUANAJUATO 2018 MEXICO TRIP.', 'thumb': 'assets/img/thumbnails/2018-04-23-guanajuato3.jpg', 'src': 'assets/img/photos/2018-04-23-guanajuato3.jpg' },
+		{'caption': 'GUANAJUATO 2018 MEXICO TRIP.', 'thumb': 'assets/img/thumbnails/2018-04-23-guanajuato2.jpg', 'src': 'assets/img/photos/2018-04-23-guanajuato2.jpg' },
+		{'caption': 'GUANAJUATO 2018 MEXICO TRIP.', 'thumb': 'assets/img/thumbnails/2018-04-23-guanajuato1.jpg', 'src': 'assets/img/photos/2018-04-23-guanajuato1.jpg' },
+		{'caption': 'IRAPUATO 2018 MEXICO TRIP.', 'thumb': 'assets/img/thumbnails/2018-04-22-irapuato1.jpg', 'src': 'assets/img/photos/2018-04-22-irapuato1.jpg' },
   		{'caption': 'MINNEAPOLIS 2017.', 'thumb': 'assets/img/thumbnails/2017-08-18-minneapolis9.jpg', 'src': 'assets/img/photos/2017-08-18-minneapolis9.jpg' },
 		{'caption': 'MINNEAPOLIS 2017.', 'thumb': 'assets/img/thumbnails/2017-08-18-minneapolis8.jpg', 'src': 'assets/img/photos/2017-08-18-minneapolis8.jpg' },
 		{'caption': 'MINNEAPOLIS 2017.', 'thumb': 'assets/img/thumbnails/2017-08-18-minneapolis7.jpg', 'src': 'assets/img/photos/2017-08-18-minneapolis7.jpg' },
