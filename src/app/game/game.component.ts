@@ -1,4 +1,4 @@
-import {Component, ViewChild, ElementRef} from '@angular/core';
+import {Component, ViewChild, ElementRef, HostListener} from '@angular/core';
 import * as THREE from 'three';
 
 @Component({
@@ -18,7 +18,7 @@ export class GameComponent {
 
         this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
         this.camera.position.z = 1000;
-
+		this.renderer.setClearColor (0xffffff, 1);
         const geometry = new THREE.BoxGeometry(200, 200, 200);
         const material = new THREE.MeshBasicMaterial({color: 0xff0000, wireframe: true});
         this.mesh = new THREE.Mesh(geometry, material);
@@ -38,4 +38,9 @@ export class GameComponent {
         this.mesh.rotation.y += 0.02;
         this.renderer.render(this.scene, this.camera);
     }
+	
+	@HostListener('window:resize', ['$event'])
+	onWindowResize(event) {
+		this.renderer.setSize(event.target.innerWidth, event.target.innerHeight)
+	}
 }
