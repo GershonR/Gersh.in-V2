@@ -24,7 +24,8 @@
 			<section>
 				<input [(colorPicker)]="color" 
 					[cpPosition]="'bottom'" 
-					[style.background]="color" 
+					[style.background]="color"
+					[cpDisableInput] ="true"
 					(colorPickerChange)="onChangeColor()"
 					[cpPresetColors]="['#3f51b5', '#000', '#2889e9', '#801793', '#0a801a', '#c61d1d']"
 					[cpCancelButton]="true"
