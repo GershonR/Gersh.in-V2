@@ -7,21 +7,17 @@
 		<mat-toolbar color="primary" [ngClass]="{'fixed-header': !isFixedHeader()}" class="mat-elevation-z8 regular-header">
 		
 		
-			<div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="5px" xShow="true" fxHide.lt-md="true">
-				<div fxFlex="5">
-		
-				</div>
-				<div fxFlex="2">
+			<div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="5px" xShow="true" fxHide.lt-md="true">
 					<img src="assets/img/logo/logo.png">
-				</div>
-				<div fxFlex="10">
-					<button mat-button [routerLink] ="['']"><mat-icon>home</mat-icon><span> Home</span></button>
-					<button mat-button [routerLink] ="['/projects']"><mat-icon>folder</mat-icon><span> Projects</span></button>
-					<button mat-button [routerLink] ="['/photos']"><mat-icon>photo</mat-icon><span> Photos</span></button>
-					<button mat-button [routerLink] ="['/links']"><mat-icon>https</mat-icon><span> Links</span></button>
-					<button mat-button [routerLink] ="['/about']"><mat-icon>person</mat-icon><span> About</span></button>
-					<button mat-button [routerLink] ="['/extras']"><mat-icon>apps</mat-icon><span> Extras</span></button>
-				</div>
+			</div>
+			
+			<div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="5px" xShow="true" fxHide.lt-md="true">
+					<button mat-button *ngFor="let navItem of navItems"
+							mat-list-item
+							[routerLink]="[navItem.route]">
+							<mat-icon>{{navItem.icon}}</mat-icon>
+							<span> {{navItem.name}}</span>
+					</button>
 		
 			</div>
 		
@@ -41,18 +37,20 @@
 		</mat-toolbar>
 		
 		<!-- Side Navigation For Mobile -->
-		<mat-sidenav #sidenav fxLayout="column" style="min-width:120px;">
+		<mat-sidenav #sidenav fxLayout="column">
 	
-			<div fxLayout="column" fxLayoutAlign="start start">
-		
-					<button mat-button [routerLink] ="['']"><mat-icon>home</mat-icon><span> Home</span></button>
-					<button mat-button [routerLink] ="['/projects']"><mat-icon>folder</mat-icon><span> Projects</span></button>
-					<button mat-button [routerLink] ="['/photos']"><mat-icon>photo</mat-icon><span> Photos</span></button>
-					<button mat-button [routerLink] ="['/links']"><mat-icon>https</mat-icon><span> Links</span></button>
-					<button mat-button [routerLink] ="['/about']"><mat-icon>person</mat-icon><span> About</span></button>
-					<button mat-button [routerLink] ="['/extras']"><mat-icon>apps</mat-icon><span> Extras</span></button>
-		
-			</div>
+			    <mat-nav-list>
+						<a *ngFor="let navItem of navItems"
+							mat-list-item
+							(click)="closeSidenav()"
+							routerLinkActive
+							#routerLinkActiveInstance="routerLinkActive"
+							[attr.tabindex]="routerLinkActiveInstance.isActive ? 0 : -1"
+							[routerLink]="[navItem.route]">
+							<mat-icon mat-list-icon>{{navItem.icon}}</mat-icon>
+							<span mat-line>{{navItem.name}}</span>
+						</a>
+			    </mat-nav-list>
 	
 		</mat-sidenav>
 	

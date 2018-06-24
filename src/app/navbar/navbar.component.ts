@@ -5,11 +5,20 @@ import { CookieService } from 'angular2-cookie/core';
 declare var jQuery:any;
 @Component({ 
     selector: 'navbar', 
+	styleUrls: ['./navbar.css'],
     templateUrl: 'navbar.component.html'
 }) 
 
 export class NavbarComponent implements AfterViewInit {
-	name = 'Angular';
+	navItems = [
+		{name: 'Home', route: '', icon: 'home'},
+		{name: 'Projects', route: '/projects', icon: 'folder'},
+		{name: 'Photos', route: '/photos', icon: 'photo'},
+		{name: 'Links', route: '/links', icon: 'https'},
+		{name: 'About', route: '/about', icon: 'person'},
+		{name: 'Extras', route: '/extras', icon: 'apps'}
+	];
+	
 	@ViewChild('sidenav') public sidenav: MatSidenav;
 	constructor(private _cookieService:CookieService){}
 	
