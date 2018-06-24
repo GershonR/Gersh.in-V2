@@ -8,7 +8,7 @@
 		
 		
 			<div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="5px" xShow="true" fxHide.lt-md="true">
-					<img src="assets/img/logo/logo.png">
+					<a [routerLink] ="['']"><img src="assets/img/logo/logo.png"></a>
 			</div>
 			
 			<div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="5px" xShow="true" fxHide.lt-md="true">
@@ -59,7 +59,7 @@
 		
 			</div>
 			<footer [ngClass]="{'footer': isFixedFooter()}">
-				<div class="mat-toolbar mat-primary" mat-subheader style="text-align: center; line-height:3"> <!-- TO DO - Replace With FooterComponent -->
+				<div class="mat-toolbar mat-primary text-center" style="line-height:3"> <!-- TO DO - Replace With FooterComponent -->
 					<small>Copyright © Gershon 2018. All rights reserved.</small>
 				</div>
 			</footer>
