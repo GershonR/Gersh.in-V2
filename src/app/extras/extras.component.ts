@@ -17,7 +17,11 @@ export class ExtrasComponent {
  checkedFooter: boolean = true;
  checkedHeader: boolean = false;
  
-  constructor(private _cookieService:CookieService){}
+  constructor(private _cookieService:CookieService){
+	  var cookieColor = this._cookieService.get("color");
+	  if(cookieColor != undefined)
+		  this.color = cookieColor;
+  }
  
   clearCookies(){
 	this._cookieService.removeAll();

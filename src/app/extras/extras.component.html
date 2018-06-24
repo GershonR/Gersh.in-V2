@@ -22,8 +22,19 @@
 			<h4>Website Color</h4>
 		
 			<section>
-				<input [(colorPicker)]="color" [cpPosition]="'bottom'" [style.background]="color" (cpSliderDragEnd)="onChangeColor()" readonly="true"/><br>
-				<button mat-raised-button color="primary" (click)="restoreDefault()"><span> Restore Default</span></button>
+				<input [(colorPicker)]="color" 
+					[cpPosition]="'bottom'" 
+					[style.background]="color" 
+					(colorPickerChange)="onChangeColor()"
+					[cpPresetColors]="['#3f51b5', '#000', '#2889e9', '#801793', '#0a801a', '#c61d1d']"
+					[cpCancelButton]="true"
+					[cpOKButton]="true"
+					[cpOKButtonClass]= "'btn btn-success'"
+					[cpCancelButtonClass]= "'btn btn-danger'"
+					readonly="true"/><br>
+				<p>
+					<button mat-raised-button color="primary" (click)="restoreDefault()"><span> Restore Default</span></button>
+				</p>
 			</section>
 		</mat-card-content>
 	</mat-card>
