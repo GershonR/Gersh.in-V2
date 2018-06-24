@@ -43,9 +43,6 @@
 						<a *ngFor="let navItem of navItems"
 							mat-list-item
 							(click)="closeSidenav()"
-							routerLinkActive
-							#routerLinkActiveInstance="routerLinkActive"
-							[attr.tabindex]="routerLinkActiveInstance.isActive ? 0 : -1"
 							[routerLink]="[navItem.route]">
 							<mat-icon mat-list-icon>{{navItem.icon}}</mat-icon>
 							<span mat-line>{{navItem.name}}</span>
