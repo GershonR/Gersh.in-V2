@@ -1,6 +1,7 @@
 import { Component, ViewChild, AfterViewInit } from '@angular/core'; 
 import { MatSidenav } from '@angular/material';
 import { CookieService } from 'angular2-cookie/core';
+import { environment } from '../../environments/environment';
 
 declare var jQuery:any;
 @Component({ 
@@ -10,6 +11,9 @@ declare var jQuery:any;
 }) 
 
 export class NavbarComponent implements AfterViewInit {
+	
+	public version: string = environment.VERSION;
+	
 	navItems = [
 		{name: 'Home', route: '', icon: 'home'},
 		{name: 'Projects', route: '/projects', icon: 'folder'},

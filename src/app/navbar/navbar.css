@@ -1,3 +1,18 @@
 .mat-sidenav {
-  min-width: 25vw;
+	min-width: 25vw;
+}
+
+.sidenav-footer {
+	position: fixed;
+	bottom: 0px;
+	background: #f1f1f1;
+    border: 1px solid #d3d3d3;
+    width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sidenav-footer-inner {
+  display: inline-block;
 }
