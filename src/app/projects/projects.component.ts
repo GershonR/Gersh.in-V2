@@ -24,7 +24,6 @@ export class ProjectsComponent implements OnInit {
         this.localState = data.yourData;
       });
 
-    console.log('hello `Projects` component');
   }
 
 
