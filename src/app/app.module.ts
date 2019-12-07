@@ -10,8 +10,7 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { LightboxModule } from 'angular2-lightbox';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { ColorPickerModule } from 'ngx-color-picker';
-import { SweetAlert2Module } from '@toverux/ngx-sweetalert2';
-
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';

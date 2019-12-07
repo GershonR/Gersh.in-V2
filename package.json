@@ -24,7 +24,10 @@
     "@angular/platform-browser": "^6.1.6",
     "@angular/platform-browser-dynamic": "^6.1.6",
     "@angular/router": "^6.1.6",
-    "@toverux/ngx-sweetalert2": "^4.0.0",
+    "@nicky-lenaers/ngx-scroll-to": "^3.0.1",
+    "@sweetalert2/ngx-sweetalert2": "^7.1.0",
+    "angular2-cookie": "^1.2.6",
+    "angular2-lightbox": "^1.4.1",
     "bootstrap": "^4.0.0-beta",
     "bootstrap-sass": "^3.3.7",
     "core-js": "^2.4.1",
@@ -32,13 +35,17 @@
     "hoek": "^5.0.3",
     "jquery": "^3.3.1",
     "ngx-color-picker": "^6.3.3",
+    "ngx-pagination": "^5.0.0",
     "popper.js": "^1.12.9",
     "rxjs": "^6.3.1",
     "rxjs-compat": "^6.0.0-rc.0",
+    "sweetalert2": "^9.4.3",
+    "three": "^0.111.0",
     "zone.js": "^0.8.19"
   },
   "devDependencies": {
-    "@angular/cli": "^6.1.5",
+    "@angular-devkit/build-angular": "~0.6.8",
+    "@angular/cli": "^8.3.20",
     "@angular/compiler-cli": "^6.1.6",
     "@angular/language-service": "^6.1.6",
     "@types/jasmine": "~2.8.3",
@@ -55,7 +62,6 @@
     "protractor": "~5.1.2",
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
-    "typescript": "~2.9.2",
-    "@angular-devkit/build-angular": "~0.6.8"
+    "typescript": "^3.7.3"
   }
 }
