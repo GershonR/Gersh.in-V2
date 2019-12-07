@@ -7,13 +7,8 @@ import { ProjectsComponent } from './projects/projects.component';
 import { PhotosComponent } from './photos/photos.component';
 import { LinksComponent } from './links/links.component';
 import { ExtrasComponent } from './extras/extras.component';
-import { GameComponent } from './game/game.component';
 
 const routes: Routes = [
-  {
-    path: 'game',
-    component: GameComponent
-  },
   {
     path: 'extras',
     component: ExtrasComponent

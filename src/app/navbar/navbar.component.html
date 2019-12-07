@@ -13,7 +13,6 @@
 			
 			<div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="5px" xShow="true" fxHide.lt-md="true">
 					<button mat-button *ngFor="let navItem of navItems"
-							mat-list-item
 							[routerLink]="[navItem.route]">
 							<mat-icon>{{navItem.icon}}</mat-icon>
 							<span> {{navItem.name}}</span>
@@ -40,12 +39,12 @@
 		<mat-sidenav #sidenav fxLayout="column">
 	
 			    <mat-nav-list>
-						<a *ngFor="let navItem of navItems"
+						<a *ngFor="let mobileNavItem of navItems"
 							mat-list-item
 							(click)="closeSidenav()"
-							[routerLink]="[navItem.route]">
-							<mat-icon mat-list-icon>{{navItem.icon}}</mat-icon>
-							<span mat-line>{{navItem.name}}</span>
+							[routerLink]="[mobileNavItem.route]">
+							<mat-icon mat-list-icon>{{mobileNavItem.icon}}</mat-icon>
+							<span mat-line>{{mobileNavItem.name}}</span>
 						</a>
 			    </mat-nav-list>
 				<div class="sidenav-footer"><small class="sidenav-footer-inner">Version: {{version}}</small></div>

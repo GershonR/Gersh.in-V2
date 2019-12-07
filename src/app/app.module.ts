@@ -1,13 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
-import { LightboxModule } from 'angular2-lightbox';
+import { LightboxModule } from 'ngx-lightbox';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { ColorPickerModule } from 'ngx-color-picker';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
@@ -21,8 +20,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PhotosComponent } from './photos/photos.component';
 import { LinksComponent } from './links/links.component';
 import { ExtrasComponent } from './extras/extras.component';
-import { GameComponent } from './game/game.component';
-
 import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 
 import { CookieService, CookieOptions } from 'angular2-cookie/core';
@@ -53,13 +50,11 @@ export class AppHammerConfig extends HammerGestureConfig  {
 	ProjectsComponent,
 	PhotosComponent,
 	LinksComponent,
-	ExtrasComponent,
-	GameComponent
+	ExtrasComponent
   ],
   imports: [
     BrowserModule,
 	HttpClientModule, 
-	HttpModule,
 	AppRoutingModule,
 	BrowserAnimationsModule,
 	MaterialModule,

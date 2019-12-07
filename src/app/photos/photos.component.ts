@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from "@angular/common/http";
 import { Observable } from 'rxjs/Rx';
-import { LightboxConfig, Lightbox, LightboxEvent, LIGHTBOX_EVENT, IEvent, IAlbum } from 'angular2-lightbox';
+import { LightboxConfig, Lightbox, LightboxEvent, LIGHTBOX_EVENT, IEvent, IAlbum } from 'ngx-lightbox';
 import { Subscription } from 'rxjs/Subscription';
 
 import { map } from 'rxjs/operators';
@@ -105,6 +105,7 @@ export class PhotosComponent {
   private _options: Object;
   private _subscription: Subscription;
   public page: number = 1;
+  
   constructor(private _lighboxConfig: LightboxConfig, private _lightbox: Lightbox, private _lightboxEvent: LightboxEvent,) {
 	this.albums = [];
     this._options = {};

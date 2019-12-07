@@ -23,7 +23,7 @@ export class NavbarComponent implements AfterViewInit {
 		{name: 'Extras', route: '/extras', icon: 'apps'}
 	];
 	
-	@ViewChild('sidenav') public sidenav: MatSidenav;
+	@ViewChild('sidenav', {static: false}) public sidenav: MatSidenav;
 	constructor(private _cookieService:CookieService){}
 	
 	ngAfterViewInit(): void {

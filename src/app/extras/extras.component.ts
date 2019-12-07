@@ -14,6 +14,13 @@ export class ExtrasComponent {
 	
  public defaultColor: string = '#3f51b5';
  public color: string = '#3f51b5';
+ public alertOptions = {
+	 title:  "Clear Cookies?",
+	 text: "Website settings will be set to default values.",
+	 icon: "warning",
+    showCancelButton: true,
+ };
+ 
  checkedFooter: boolean = true;
  checkedHeader: boolean = false;
  

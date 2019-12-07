@@ -19,7 +19,6 @@
     "@angular/core": "^8.2.14",
     "@angular/flex-layout": "^8.0.0-beta.27",
     "@angular/forms": "^8.2.14",
-    "@angular/http": "^7.2.15",
     "@angular/material": "^8.0.0",
     "@angular/platform-browser": "^8.2.14",
     "@angular/platform-browser-dynamic": "^8.2.14",
@@ -28,7 +27,6 @@
     "@nicky-lenaers/ngx-scroll-to": "^3.0.1",
     "@sweetalert2/ngx-sweetalert2": "^7.1.0",
     "angular2-cookie": "^1.2.6",
-    "angular2-lightbox": "^1.4.1",
     "bootstrap": "^4.0.0-beta",
     "bootstrap-sass": "^3.3.7",
     "core-js": "^2.4.1",
@@ -36,23 +34,22 @@
     "hoek": "^5.0.3",
     "jquery": "^3.3.1",
     "ngx-color-picker": "^6.3.3",
+    "ngx-lightbox": "^2.0.0",
     "ngx-pagination": "^5.0.0",
     "popper.js": "^1.12.9",
     "rxjs": "^6.3.1",
     "rxjs-compat": "^6.0.0-rc.0",
     "sweetalert2": "^9.4.3",
-    "three": "^0.111.0",
     "zone.js": "^0.9.1"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.800.0",
+    "@angular-devkit/build-angular": "^0.803.20",
     "@angular/cli": "^8.3.20",
     "@angular/compiler-cli": "^8.2.14",
     "@angular/language-service": "^8.2.14",
     "@types/jasmine": "~2.8.3",
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
-    "codelyzer": "^4.0.1",
     "jasmine-core": "~2.8.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~2.0.0",
@@ -63,6 +60,6 @@
     "protractor": "~5.1.2",
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
-    "typescript": "^3.7.3"
+    "typescript": "^3.5.3"
   }
 }
